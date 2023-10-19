@@ -1,0 +1,103 @@
+* {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --primario: #ff6a14;
+    --secundario: black;
+    --blanco: white;
+    --fuentePrincipal: 'Merriweather', serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+
+}
+
+/* ---- Header ----*/
+header {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    background-color: var(--secundario);
+    justify-content: space-between;
+    min-height: 70px;
+}
+
+.logo {
+    display: flex;
+    height: 50px;
+
+}
+
+.pos-logo {
+    display: flex;
+    align-items: center;
+}
+
+
+.header-pages {
+    display: flex;
+    justify-items: end;
+}
+
+.nombre-tienda {
+    color: var(--blanco);
+    font-size: 25px;
+    margin-inline: 25px;
+    font-family: var(--fuentePrincipal);
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--fuentePrincipal);
+}
+
+header nav a {
+    margin-inline: 25px;
+    color: white;
+}
+
+header nav a:hover {
+    color: var(--primario);
+}
+
+/*funcion util a la hora de reducir el tamaño de la pag*/
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav {
+        padding: 20px 0px;
+    }
+}
+
+/* ---- Maim ----*/
+
+
+/* ---- Footer ----*/
+.footer {
+    background-color: var(--secundario);
+    padding: 1rem 0;
+    margin-top: 10%;
+}
+
+.footer-texto {
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    text-align: center;
+}
