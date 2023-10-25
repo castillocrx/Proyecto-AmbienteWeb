@@ -1,5 +1,4 @@
 * {
-    font-family: 'Kanit', sans-serif;
     margin: 0;
     box-sizing: border-box;
 
@@ -36,6 +35,8 @@ header {
     justify-content: space-between;
     min-height: 70px;
 }
+
+
 
 .logo {
     display: flex;
@@ -86,7 +87,74 @@ header nav a:hover {
     }
 }
 
-/* ---- Maim ----*/
+/* ---- Main ----*/
+
+.bienvenido{
+    font-size: 60px;
+    font-family: var(--fuentePrincipal);
+}
+
+.bienv-pos{
+    display: flex;
+    justify-content: center;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*     column-gap: 2rem;
+    row-gap: 2rem; */
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* hamburguesas */
+
+.tema {
+    padding: 15px;
+    
+}
+
+.hamburguesa-nombre {
+    font-size: 26px;
+}
+
+.precio {
+    font-size: 20px;
+    color: var(--secundario);
+}
+
+.hamburguesa-nombre,
+.precio {
+    font-family: var(--fuentePrincipal);
+    margin: 15px;
+    text-align: center;
+    line-height: 1rem;
+
+}
+
+.ham-imagen{
+    height: 120px;
+
+}
+
+.pos-img{
+    display: flex;
+    justify-content: center;
+}
+
+.verMas{
+    margin-top: 50%;
+    font-size: 30px;
+    font-family: var(--fuentePrincipal);
+}
 
 
 /* ---- Footer ----*/
@@ -100,4 +168,25 @@ header nav a:hover {
     font-family: var(--fuentePrincipal);
     color: var(--blanco);
     text-align: center;
+}
+
+
+/* ---- php ----*/
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto {
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.producto img {
+    margin-bottom: 10px;
 }
