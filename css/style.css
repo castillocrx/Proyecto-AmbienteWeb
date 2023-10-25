@@ -185,8 +185,10 @@ header nav a:hover {
     border: 1px solid #ccc;
     border-radius: 10px;
     text-align: center;
+    font-family: var(--fuentePrincipal);
 }
 
 .producto img {
     margin-bottom: 10px;
+    margin: 10%;
 }
