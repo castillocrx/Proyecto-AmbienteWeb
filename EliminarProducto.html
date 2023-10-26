@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gestión de Productos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- preload -->
+    <link rel="preload" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="main-button" onclick="toggleSubButtons()">Eliminar Producto</button>
+        <div class="sub-buttons" id="subButtons">
+            <button class="sub-button" onclick="SVGAElement()">Guardar</button>
+            <a href="GestiónProducto.html"><button class="sub-button" onclick="cancelIdleCallback()">Cancelar</button></a>
+            
+        </div>
+    </div>
+
+    <script>
+        function toggleSubButtons() {
+            var subButtons = document.getElementById("subButtons");
+            if (subButtons.style.display === "none") {
+                subButtons.style.display = "block";
+            } else {
+                subButtons.style.display = "none";
+            }
+        }
+
+        function deleteProduct() {
+            alert("Funcionalidad de eliminar producto");
+        }
+
+        
+    </script>
+
+</body>
+
+</html>
