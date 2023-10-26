@@ -81,4 +81,24 @@ function getObject($sql) {
     return $retorno;
 }
 
+function eliminarProducto($idProducto) {
+    try {
+        $oConexion = Conecta();
+
+        $stmt = $oConexion->prepare("DELETE FROM productos WHERE id = ?");
+        $stmt->bind_param("i", $idProducto);
+
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (\Throwable $th) {
+        echo $th; 
+        return false;
+    } finally {
+        Desconecta($oConexion);
+    }
+}
+
 

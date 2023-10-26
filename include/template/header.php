@@ -18,7 +18,7 @@
     <!-- Header -->
     <header>
         <div class="pos-logo">
-            <a href="index.html">
+            <a href="mainProductos.php">
                 <img class="logo" src="img/logo.jpg" alt="Logo de tienda">
 
             </a>

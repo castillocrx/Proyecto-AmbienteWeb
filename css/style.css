@@ -5,10 +5,12 @@
 }
 
 :root {
-    --primario: #ff6a14;
+    --primario: #3e7ff7;
     --secundario: black;
     --blanco: white;
     --fuentePrincipal: 'Merriweather', serif;
+    --primarioOscuro:rgba(0, 0, 153, 0.712);
+    --gris:#ccc;
 }
 
 html {
@@ -171,7 +173,7 @@ header nav a:hover {
 }
 
 
-/* ---- php ----*/
+/* ---- MAIN PRODUCTOD PHP ----*/
 .productos {
     display: flex;
     flex-wrap: wrap;
@@ -182,7 +184,7 @@ header nav a:hover {
     width: 300px;
     margin: 20px;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--gris);
     border-radius: 10px;
     text-align: center;
     font-family: var(--fuentePrincipal);
@@ -193,34 +195,98 @@ header nav a:hover {
     margin: 10%;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-}
-
-.main-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
+.boton-admin {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--primario);
+    color: #fff;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+    border-radius: 5px;
 }
 
-.sub-buttons {
-    display: none;
-    margin-top: 20px;
+.boton-añadir:hover {
+    background-color: var(--primarioOscuro);
 }
 
-.sub-button {
-    display: block;
+/* ---- AÑADIR PRODUCTOS PHP ----*/
+
+.contenedor-añadirP {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pos-h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: var(--fuentePrincipal);
+}
+
+.productos {
+    background-color: #f9f9f9;
+    border: 1px solid var(--gris);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.errores {
+    color: #ff0000;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: var(--fuentePrincipal);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"] {
     width: 100%;
     padding: 10px;
+    border: 1px solid var(--blanco);
+    border-radius: 5px;
+    font-size: 16px;
     margin-top: 5px;
+}
+
+.formulario__submit {
+    background-color: var(--primario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.formulario__submit:hover {
+    background-color: var(--primarioOscuro);
+}
+
+/* ---- MOSTRAR PRODUCTOS PHP ----*/
+.productos th, .productos td {
+    border: 1px solid var(--gris);
+    padding: 10px;
+    text-align: left;
+}
+
+.productos th {
+    background-color: var(--blanco);
 }

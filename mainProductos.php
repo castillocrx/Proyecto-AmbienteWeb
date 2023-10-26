@@ -3,7 +3,7 @@ include_once "include/template/header.php";
 ?>
 
 <div class="bienv-pos">
-    <h1 class="bienvenido">Las mejores hamburguesas.</h1>
+    <h1 class="bienvenido">Nuestras hamburguesas.</h1>
 </div>
 
 <main class="contenedor">
@@ -19,6 +19,7 @@ include_once "include/template/header.php";
                 echo "<p>{$value['descripcion']}</p>";
                 echo "<img src='{$value['imagen']}' alt='Imagen del producto' height='100'>";
                 echo "<p>Precio: {$value['precio']}</p>";
+                echo "<a href=mostrar-producto.php?id={$value['id']} class='boton-admin'>Ver Producto</a>";
                 echo "</div>";
             }
         } else {
@@ -27,7 +28,7 @@ include_once "include/template/header.php";
         ?>
     </div>
 </main>
-
+<a href="añadir-producto.php" class="boton-admin">Añadir Productos</a>
 <?php
 require_once "include/template/footer.php";
 ?>
