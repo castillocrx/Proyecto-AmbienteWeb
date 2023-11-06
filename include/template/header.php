@@ -26,7 +26,7 @@
         </div>
         <nav class="header-pages">
             <a href="nosotros.html" rel="noopener noreferrer">Nosotros</a>
-            <a href="contacto.html" rel="noopener noreferrer">Contáctenos</a>
+            <a href="contacto.php" rel="noopener noreferrer">Contáctenos</a>
             <a href="descuentos.html" rel="noopener noreferrer">Descuentos</a>
             <a href="Cuenta.html" rel="noopener noreferrer">Cuenta</a>
         </nav>

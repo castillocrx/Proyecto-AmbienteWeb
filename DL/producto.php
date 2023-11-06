@@ -34,6 +34,7 @@ function IngresoProducto($pNombre, $pDescripcion, $pImagen, $pPrecio) {
 }
 
 function getArray($sql) {
+    $retorno = array();
     try {
         $oConexion = Conecta();
 
