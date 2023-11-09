@@ -9,8 +9,8 @@
     --secundario: black;
     --blanco: white;
     --fuentePrincipal: 'Merriweather', serif;
-    --primarioOscuro:rgba(0, 0, 153, 0.712);
-    --gris:#ccc;
+    --primarioOscuro: rgba(0, 0, 153, 0.712);
+    --gris: #ccc;
 }
 
 html {
@@ -91,12 +91,12 @@ header nav a:hover {
 
 /* ---- Main ----*/
 
-.bienvenido{
+.bienvenido {
     font-size: 60px;
     font-family: var(--fuentePrincipal);
 }
 
-.bienv-pos{
+.bienv-pos {
     display: flex;
     justify-content: center;
 }
@@ -121,7 +121,7 @@ header nav a:hover {
 
 .tema {
     padding: 15px;
-    
+
 }
 
 .hamburguesa-nombre {
@@ -142,17 +142,17 @@ header nav a:hover {
 
 }
 
-.ham-imagen{
+.ham-imagen {
     height: 120px;
 
 }
 
-.pos-img{
+.pos-img {
     display: flex;
     justify-content: center;
 }
 
-.verMas{
+.verMas {
     margin-top: 50%;
     font-size: 30px;
     font-family: var(--fuentePrincipal);
@@ -281,7 +281,8 @@ input[type="url"] {
 }
 
 /* ---- MOSTRAR PRODUCTOS PHP ----*/
-.productos th, .productos td {
+.productos th,
+.productos td {
     border: 1px solid var(--gris);
     padding: 10px;
     text-align: left;
@@ -289,4 +290,47 @@ input[type="url"] {
 
 .productos th {
     background-color: var(--blanco);
+}
+
+/* ---- NOSOTROS PHP ----*/
+
+.info-tienda, .nuestra-tienda {
+    margin: 2%;
+    background-color: #f9f9f9;
+    border: 1px solid var(--gris);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.texto {
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid var(--gris);
+    border-radius: 10px;
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+}
+
+
+.parrafo{
+    font-size: 20px;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-style: italic;
+    margin-inline: 10%;
+}
+
+.logo-nosotros{
+    display: flex;
+    
+
+}
+
+.pos-logo-nosotros {
+    display: flex;
+    justify-content: center;
 }

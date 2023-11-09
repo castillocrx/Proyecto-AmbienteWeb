@@ -25,9 +25,9 @@
             <h2 class="nombre-tienda">Burger Shop</h2>
         </div>
         <nav class="header-pages">
-            <a href="nosotros.html" rel="noopener noreferrer">Nosotros</a>
+            <a href="nosotros.php" rel="noopener noreferrer">Nosotros</a>
             <a href="contacto.php" rel="noopener noreferrer">Contáctenos</a>
-            <a href="descuentos.html" rel="noopener noreferrer">Descuentos</a>
-            <a href="Cuenta.html" rel="noopener noreferrer">Cuenta</a>
+            <a href="descuentos.php" rel="noopener noreferrer">Descuentos</a>
+            <a href="cuenta.php" rel="noopener noreferrer">Cuenta</a>
         </nav>
     </header>
