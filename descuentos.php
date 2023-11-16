@@ -2,25 +2,44 @@
 include_once "include/template/header.php";
 ?>
 
-<link rel="stylesheet" href="css/descuentos.css">
 
+
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/descuentos.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 <body>
-    <main>
-        <div class="contenido">
-            <div class="cont-imagen">
-            <img class="logo" src="img/bbq.jpg" alt="Logo de tienda">
-            <img class="logo" src="img/bbq.jpg" alt="Logo de tienda">
-            <img class="logo" src="img/bbq.jpg" alt="Logo de tienda">
-            <img class="logo" src="img/bbq.jpg" alt="Logo de tienda">
-            <img class="logo" src="img/bbq.jpg" alt="Logo de tienda">
-            <img class="logo" src="img/bbq.jpg" alt="Logo de tienda">
-            <img class="logo" src="img/bbq.jpg" alt="Logo de tienda">
-            <img class="logo" src="img/bbq.jpg" alt="Logo de tienda">
-            </div>
-        </div>
-    </main>
+    <section class="carousel">
+        <ol class="carousel__viewport">
+            <li class="carousel__slide">
+                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
+            </li>
+            <li class="carousel__slide">
+                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
+            </li>
+            <li class="carousel__slide">
+                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
+            </li>
+            <li class="carousel__slide">
+                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
+            </li>
+            <li class="carousel__slide">
+                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
+            </li>
+            <li class="carousel__slide">
+                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
+            </li>
+            <li class="carousel__slide">
+                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
+            </li>
+        </ol>
+    </section>
 </body>
+
+</html>
+
+
 
 <?php
 require_once "include/template/footer.php";
