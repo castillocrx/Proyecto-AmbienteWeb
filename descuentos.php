@@ -16,22 +16,10 @@ include_once "include/template/header.php";
                 <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
             </li>
             <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
+                <div class="carousel__snapper" style="background-image: url('img/clasica.avif')"></div>
             </li>
             <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
+                <div class="carousel__snapper" style="background-image: url('img/pollo.avif')"></div>
             </li>
         </ol>
     </section>

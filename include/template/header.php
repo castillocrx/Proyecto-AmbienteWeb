@@ -28,6 +28,6 @@
             <a href="nosotros.php" rel="noopener noreferrer">Nosotros</a>
             <a href="contacto.php" rel="noopener noreferrer">Contáctenos</a>
             <a href="descuentos.php" rel="noopener noreferrer">Descuentos</a>
-            <a href="cuenta.php" rel="noopener noreferrer">Cuenta</a>
+            <a href="datosCliente.php" rel="noopener noreferrer">Cuenta</a>
         </nav>
     </header>
