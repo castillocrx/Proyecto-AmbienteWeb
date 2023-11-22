@@ -11,3 +11,17 @@ Acompañamiento papas.', 'https://cocinamexicana.club/wp-content/uploads/2021/08
 
 INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `imagen`, `precio`) VALUES (NULL, 'Hamburguesa de Salmón', 'Filetes de salmón fresco, con pan rallado, huevo y condimentos a la parrilla, pan de hamburguesa tostado con aguacate, pepino, cebolla roja y mayonesa de eneldo.
 Acompañamiento papas.', 'https://placeralplato.com/files/2019/06/Hamburguesa-de-salmn-con-mayonesa-de-albahaca-y-lima.jpg', '9000');
+
+INSERT INTO `usuario` (`id_usuario`, `correo`, `contraseña`, `nombre`, `apellido`) VALUES (NULL, 'josedaniel754@gmail.com', 'Josedaniel1234', 'Jose Daniel', 'Murillo');
+INSERT INTO `usuario` (`id_usuario`, `correo`, `contraseña`, `nombre`, `apellido`) VALUES (NULL, 'Pedrozapata96@gmail.com', 'Pedrozapatal5496', 'Pedro', 'Zapata');
+INSERT INTO `usuario` (`id_usuario`, `correo`, `contraseña`, `nombre`, `apellido`) VALUES (NULL, 'Juandiego31@gmail.com', 'JuanDiego3107', 'Juan Diego', 'Salas');
+INSERT INTO `usuario` (`id_usuario`, `correo`, `contraseña`, `nombre`, `apellido`) VALUES (NULL, 'Marypaz26@gmail.com', 'MaryPaz2612', 'Mary Paz', 'González');
+
+INSERT INTO `factura` (`id_factura`, `id_usuario`, `id_producto`, `fecha`) VALUES (NULL, NULL, NULL, '07/10/2023');
+INSERT INTO `factura` (`id_factura`, `id_usuario`, `id_producto`, `fecha`) VALUES (NULL, NULL, NULL, '15/11/2023');
+INSERT INTO `factura` (`id_factura`, `id_usuario`, `id_producto`, `fecha`) VALUES (NULL, NULL, NULL, '01/10/2023');
+INSERT INTO `factura` (`id_factura`, `id_usuario`, `id_producto`, `fecha`) VALUES (NULL, NULL, NULL, '30/09/2023');
+
+INSERT INTO `descuento` (`id_descuento`, `id_factura`, `id_producto`, `porcentaje`) VALUES (NULL, NULL, NULL, '25%');
+INSERT INTO `descuento` (`id_descuento`, `id_factura`, `id_producto`, `porcentaje`) VALUES (NULL, NULL, NULL, '20%');
+INSERT INTO `descuento` (`id_descuento`, `id_factura`, `id_producto`, `porcentaje`) VALUES (NULL, NULL, NULL, '15%');
