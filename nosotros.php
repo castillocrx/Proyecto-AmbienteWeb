@@ -1,9 +1,10 @@
 <?php
 include_once "include/template/header.php";
 ?>
+<link rel="stylesheet" href="css/nosotros.css">
 <main class="contenedor">
     <div class="bienv-pos">
-        <h1 class="bienvenido">Nuestra Tienda</h1>
+        <h1 class="bienvenido">BURGER SHOP</h1>
     </div>
     <div class="pos-logo-nosotros">
         <a href="mainProductos.php">
