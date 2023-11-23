@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['correo'] = $mySession['correo'];
                 $_SESSION['idCliente'] = $mySession['idCliente'];
                 $_SERVER['login'] = true;
-                header("Location: verUsuarios.php");
+                header("Location: cuenta.php");
             }else{
                 $errores[] = "No se pudo iniciar sesión";
             }

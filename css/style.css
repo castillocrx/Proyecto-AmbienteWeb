@@ -55,6 +55,7 @@ header {
 .header-pages {
     display: flex;
     justify-items: end;
+    align-items: center;
 }
 
 .nombre-tienda {

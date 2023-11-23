@@ -20,12 +20,12 @@ CREATE TABLE
     ) ENGINE = InnoDB;
 
 CREATE TABLE
-    factura (
-        `Id_factura` INT NOT NULL AUTO_INCREMENT,
-        `Id_usuario` INT NOT NULL,
-        `Id_producto` INT NOT NULL,
+    facturas (
+        `idFactura` INT NOT NULL AUTO_INCREMENT,
+        `factura_idCliente` INT NOT NULL,
+        `factura_idProducto` INT NOT NULL,
         `Fecha` DATE NOT NULL,
-        PRIMARY KEY (`Id_factura`)
+        PRIMARY KEY (`idFactura`)
     ) ENGINE = InnoDB;
 
 CREATE TABLE

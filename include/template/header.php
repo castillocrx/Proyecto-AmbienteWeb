@@ -20,14 +20,17 @@
         <div class="pos-logo">
             <a href="mainProductos.php">
                 <img class="logo" src="img/logo.jpg" alt="Logo de tienda">
-
             </a>
             <h2 class="nombre-tienda">Burger Shop</h2>
-        </div>
+        </div>  
         <nav class="header-pages">
             <a href="nosotros.php" rel="noopener noreferrer">Nosotros</a>
             <a href="contacto.php" rel="noopener noreferrer">Contáctenos</a>
             <a href="descuentos.php" rel="noopener noreferrer">Descuentos</a>
-            <a href="datosCliente.php" rel="noopener noreferrer">Cuenta</a>
+            <a href="cuenta.php" rel="noopener noreferrer">Cuenta</a>
+            <a href="carrito.php">
+                <img class="logo" src="img/carrito.png" alt="Logo de tienda">
+            </a>
         </nav>
+        
     </header>

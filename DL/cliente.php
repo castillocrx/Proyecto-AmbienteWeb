@@ -89,31 +89,38 @@ function getObject($sql) {
     return $retorno;
 }
 
-
-
-function DefinirContrasena($pCorreo, $pContrasena) {
-    $retorno = false;
-
+function getClienteByCorreo($correo) {
     try {
         $oConexion = Conecta();
 
-        if(mysqli_set_charset($oConexion, "utf8")){
-            $stmt = $oConexion->prepare("update clientes set password = ? where correo = ?");
-            $stmt->bind_param("ss", $iContrasena, $iCorreo);
-
-            $iCorreo = $pCorreo;
-            $iContrasena = $pContrasena;
-
-            if($stmt->execute()){
-                $retorno = true;
+        if (mysqli_set_charset($oConexion, "utf8")) {
+            $stmt = mysqli_prepare($oConexion, "SELECT idCliente, nombre, correo, direccion, telefono FROM clientes WHERE correo = ?");
+            
+            if ($stmt === false) {
+                die(mysqli_error($oConexion));
             }
-        }
 
+            mysqli_stmt_bind_param($stmt, "s", $correo);
+
+            if (mysqli_stmt_execute($stmt)) {
+                $result = mysqli_stmt_get_result($stmt);
+
+                $cliente = null;
+
+                if ($row = mysqli_fetch_assoc($result)) {
+                    $cliente = $row;
+                }
+            } else {
+                die(mysqli_error($oConexion));
+            }
+
+            mysqli_stmt_close($stmt);
+        }
     } catch (\Throwable $th) {
         echo $th;
-    }finally{
+    } finally {
         Desconecta($oConexion);
     }
 
-    return $retorno;
+    return $cliente;
 }
