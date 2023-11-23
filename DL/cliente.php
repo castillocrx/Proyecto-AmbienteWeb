@@ -13,7 +13,7 @@ function IngresoCliente($pNombre, $pCorreo, $pDireccion, $pTelefono, $pContrasen
         // formato datos utf8
         if (mysqli_set_charset($oConexion, "utf8")) {
             // Hash de la contraseña utilizando Bcrypt
-            $hashContrasena = password_hash($pContrasena, PASSWORD_DEFAULT);
+            $hashContrasena = password_hash($pContrasena, PASSWORD_BCRYPT);
 
             $stmt = $oConexion->prepare("INSERT INTO clientes (nombre, correo, direccion, telefono, password) VALUES (?, ?, ?, ?, ?)");
             $stmt->bind_param("sssss", $iNombre, $iCorreo, $iDireccion, $iTelefono, $iContrasena);
@@ -22,7 +22,7 @@ function IngresoCliente($pNombre, $pCorreo, $pDireccion, $pTelefono, $pContrasen
             $iCorreo = $pCorreo;
             $iDireccion = $pDireccion;
             $iTelefono = $pTelefono;
-            $iContrasena = $pContrasena; // Almacenar el hash en lugar de la contraseña original
+            $iContrasena = $hashContrasena; // Almacenar el hash en lugar de la contraseña original
 
             if ($stmt->execute()) {
                 $retorno = true;

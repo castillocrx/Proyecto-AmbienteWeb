@@ -14,6 +14,7 @@ CREATE TABLE
         `nombre` VARCHAR (50) NOT NULL,
         `correo` VARCHAR (50) NOT NULL,
         `direccion` VARCHAR (50) NOT NULL,
+        `password` VARCHAR (255) NOT NULL,
         `telefono` VARCHAR (50) NOT NULL,
         PRIMARY KEY (`idCliente`)
     ) ENGINE = InnoDB;

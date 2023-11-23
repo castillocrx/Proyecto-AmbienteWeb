@@ -20,17 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errores)) {
         // echo "Ingreso datos a base de datos";
         require_once "DL/cliente.php";
-        $query = "select idCliente, nombre, correo, telefono, password from clientes where correo = '$correo'";
+        $query = "select idCliente, nombre, correo, direccion, telefono, password from clientes where correo = '$correo'";
         $mySession = getObject($query);
 
         if($mySession != null){
             $auth = password_verify($contrasena, $mySession['password']);
             if($auth){
                 session_start();
-                $_SESSION['usuario'] = $mySession['correo'];
-                $_SESSION['id'] = $mySession['id'];
+                $_SESSION['correo'] = $mySession['correo'];
+                $_SESSION['idCliente'] = $mySession['idCliente'];
                 $_SERVER['login'] = true;
-                header("Location: perfil.php");
+                header("Location: verUsuarios.php");
             }else{
                 $errores[] = "No se pudo iniciar sesión";
             }
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form method="post" class="formulario">
             <!-- novalidate -->
             <div class="form-group">
-                <label for="correo">Correo estudiante:</label>
+                <label for="correo">Digite el Correo:</label>
                 <input type="email" name="correo" id="correo" placeholder="Digite su correo">
             </div>
             <div class="form-group">
