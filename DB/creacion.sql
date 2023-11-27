@@ -1,9 +1,9 @@
 CREATE TABLE productos (
-    `Id` INT NOT NULL AUTO_INCREMENT,
-    `Nombre` VARCHAR(100) NOT NULL,
-    `Descripción` TEXT NOT NULL,
-    `Imagen` VARCHAR(255) NOT NULL,
-    `Precio` DOUBLE NOT NULL,
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `nombre` VARCHAR(100) NOT NULL,
+    `descripción` TEXT NOT NULL,
+    `imagen` VARCHAR(255) NOT NULL,
+    `precio` DOUBLE NOT NULL,
     PRIMARY KEY (`Id`)
 ) ENGINE = InnoDB;
 
@@ -17,20 +17,13 @@ CREATE TABLE clientes (
     PRIMARY KEY (`idCliente`)
 ) ENGINE = InnoDB;
 
-CREATE TABLE descuentos (
-    `Id_descuento` INT NOT NULL AUTO_INCREMENT,
-    `Porcentaje` FLOAT NOT NULL,
-    PRIMARY KEY (`Id_descuento`)
-) ENGINE = InnoDB;
-
 CREATE TABLE facturas (
     `idFactura` INT NOT NULL AUTO_INCREMENT,
     `factura_idCliente` INT NOT NULL,
-    `Id_producto` INT NOT NULL,
-    `Id_descuento` INT NOT NULL,
-    `Fecha` DATE NOT NULL,
+    `factura_idProducto` INT NOT NULL,
+    `fecha` DATE NOT NULL,
+    `precioTotal` INT NOT NULL,
     PRIMARY KEY (`idFactura`),
     FOREIGN KEY (`factura_idCliente`) REFERENCES clientes(`idCliente`),
-    FOREIGN KEY (`Id_producto`) REFERENCES productos(`Id`),
-    FOREIGN KEY (`Id_descuento`) REFERENCES descuentos(`Id_descuento`)
+    FOREIGN KEY (`factura_idProducto`) REFERENCES productos(`id`)
 ) ENGINE = InnoDB;

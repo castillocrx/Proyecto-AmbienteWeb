@@ -98,64 +98,34 @@ Acompañamiento papas.',
     );
 
 INSERT INTO
-    `factura` (
-        `id_factura`,
-        `id_usuario`,
-        `id_producto`,
-        `fecha`
+    `productos` (
+        `id`,
+        `nombre`,
+        `descripcion`,
+        `imagen`,
+        `precio`
     )
-VALUES (NULL, NULL, NULL, '07/10/2023');
+VALUES (
+        NULL,
+        'Super Promo Doble Hamburguesa Clasica',
+        'Carne de res a la parrilla, queso cheddar fundido, pan suave y esponjoso ligeramente tostado, cebolla, tomate, lechuga y una salsa especial de la casa. x2!',
+        'https://static.vecteezy.com/system/resources/previews/026/794/680/large_2x/double-hamburger-isolated-on-white-background-fresh-burger-fast-food-with-beef-and-cream-cheese-realistic-image-ultra-hd-high-design-very-detailed-free-photo.jpg',
+        '4900'
+    );
 
 INSERT INTO
-    `factura` (
-        `id_factura`,
-        `id_usuario`,
-        `id_producto`,
-        `fecha`
+    `productos` (
+        `id`,
+        `nombre`,
+        `descripcion`,
+        `imagen`,
+        `precio`
     )
-VALUES (NULL, NULL, NULL, '15/11/2023');
+VALUES (
+        NULL,
+        'Promo 3 Mini Hamburguesas Queso',
+        'Carne de res a la parrilla, queso fundido, pan suave y esponjoso ligeramente tostado y lechuga',
+        'https://img.freepik.com/premium-photo/hearty-appetizing-hamburgers-cooked-fire-backyard-grill_124507-103443.jpg', 
+        '4860'
+    );
 
-INSERT INTO
-    `factura` (
-        `id_factura`,
-        `id_usuario`,
-        `id_producto`,
-        `fecha`
-    )
-VALUES (NULL, NULL, NULL, '01/10/2023');
-
-INSERT INTO
-    `factura` (
-        `id_factura`,
-        `id_usuario`,
-        `id_producto`,
-        `fecha`
-    )
-VALUES (NULL, NULL, NULL, '30/09/2023');
-
-INSERT INTO
-    `descuento` (
-        `id_descuento`,
-        `id_factura`,
-        `id_producto`,
-        `porcentaje`
-    )
-VALUES (NULL, NULL, NULL, '25%');
-
-INSERT INTO
-    `descuento` (
-        `id_descuento`,
-        `id_factura`,
-        `id_producto`,
-        `porcentaje`
-    )
-VALUES (NULL, NULL, NULL, '20%');
-
-INSERT INTO
-    `descuento` (
-        `id_descuento`,
-        `id_factura`,
-        `id_producto`,
-        `porcentaje`
-    )
-VALUES (NULL, NULL, NULL, '15%');

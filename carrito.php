@@ -11,6 +11,20 @@ include_once "include/template/header.php";
         require_once "include/functions/recoge.php";
         session_start();
 
+        if (isset($_SESSION['correo'])) {
+            require_once "DL/cliente.php";
+            $cliente = getClienteByCorreo($_SESSION['correo']);
+
+            if ($cliente) {
+                echo "";
+            } else {
+                echo "<p>Error al obtener la información del cliente</p>";
+            }
+        } else {
+            header("Location: login.php");
+            exit();
+        }
+
         if (isset($_POST['eliminar']) && isset($_POST['id'])) {
             $id = $_POST['id'];
 
@@ -38,9 +52,13 @@ include_once "include/template/header.php";
                 echo "<input class='boton-admin' type='submit' name='eliminar' value='Eliminar'>";
                 echo "</form>";
                 $totalPrecio += $producto['precio'];
+                echo "<form method='post' action='realizar-compra.php'>";
+                echo "<input type='hidden' name='id' value='$id'>";
+                echo "<input class='boton-admin' type='submit' name='comprar' value='Comprar'>";
+                echo "</form>";
+
                 echo "</div>";
             }
-
         } else {
             echo "<p>No hay productos en el carrito.</p>";
         }

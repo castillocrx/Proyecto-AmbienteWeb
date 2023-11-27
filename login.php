@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // echo "Ingreso datos a base de datos";
         require_once "DL/cliente.php";
         $query = "select idCliente, nombre, correo, direccion, telefono, password from clientes where correo = '$correo'";
-        $mySession = getObject($query);
+        $mySession = getObject2($query);
 
         if($mySession != null){
             $auth = password_verify($contrasena, $mySession['password']);
@@ -64,8 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="contrasena">Digite la contraseña:</label>
                 <input type="password" name="contrasena" id="contrasena" placeholder="Digite su contraseña">
             </div>
-
-            <input type="submit" class="formulario__submit" value="Ingreso">
+            <input type="submit" class="formulario__submit" value="Ingreso"><br>
+            <a href="datosCliente.php"  class="boton-admin" rel="noopener noreferrer">Agregar cuenta</a>
         </form>
     </div>
 

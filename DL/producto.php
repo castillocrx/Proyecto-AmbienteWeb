@@ -102,4 +102,37 @@ function eliminarProducto($idProducto) {
     }
 }
 
+// En producto.php
+function getProductoById($id) {
+    try {
+        $oConexion = Conecta();
+
+        if (mysqli_set_charset($oConexion, "utf8")) {
+            $stmt = mysqli_prepare($oConexion, "SELECT id, nombre, descripcion, imagen, precio FROM productos WHERE id = ?");
+            mysqli_stmt_bind_param($stmt, "i", $id);
+
+            if (mysqli_stmt_execute($stmt)) {
+                $result = mysqli_stmt_get_result($stmt);
+
+                $producto = null;
+
+                if ($row = mysqli_fetch_assoc($result)) {
+                    $producto = $row;
+                }
+            } else {
+                echo "Error en la ejecución de la consulta";
+            }
+
+            mysqli_stmt_close($stmt);
+        }
+    } catch (\Throwable $th) {
+        echo $th;
+    } finally {
+        Desconecta($oConexion);
+    }
+
+    return $producto;
+}
+
+
 

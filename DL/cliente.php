@@ -38,7 +38,7 @@ function IngresoCliente($pNombre, $pCorreo, $pDireccion, $pTelefono, $pContrasen
     return $retorno;
 }
 
-function getArray($sql) {
+function getArray2($sql) {
     try {
         $oConexion = Conecta();
 
@@ -63,7 +63,7 @@ function getArray($sql) {
     return $retorno;
 }
 
-function getObject($sql) {
+function getObject2($sql) {
     try {
         $oConexion = Conecta();
 

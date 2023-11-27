@@ -2,33 +2,33 @@
 include_once "include/template/header.php";
 ?>
 
+<div class="bienv-pos">
+    <h1 class="bienvenido">Nuestros descuentos.</h1>
+</div>
 
+<main class="contenedor">
+    <div class="productos">
+        <?php
+        require_once "DL/producto.php";
+        $elSql = "SELECT id, nombre, descripcion, imagen, precio FROM productos WHERE precio < 5000";
+        $myArray = getArray($elSql);
 
-<!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="css/descuentos.css">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-<body>
-    <section class="carousel">
-        <ol class="carousel__viewport">
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('img/bbq.jpg')"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('img/clasica.avif')"></div>
-            </li>
-            <li class="carousel__slide">
-                <div class="carousel__snapper" style="background-image: url('img/pollo.avif')"></div>
-            </li>
-        </ol>
-    </section>
-</body>
-
-</html>
-
-
-
+        if (!empty($myArray)) {
+            foreach ($myArray as $value) {
+                echo "<div class='producto'>";
+                echo "<h2>{$value['nombre']}</h2>";
+                echo "<p>{$value['descripcion']}</p>";
+                echo "<img src='{$value['imagen']}' alt='Imagen del producto' height='100'>";
+                echo "<p>Precio: {$value['precio']}</p>";
+                echo "<a href=mostrar-producto.php?id={$value['id']} class='boton-admin'>Ver Producto</a>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>No hay descuentos disponibles en este momento.</p>";
+        }
+        ?>
+    </div>
+</main>
 <?php
 require_once "include/template/footer.php";
 ?>

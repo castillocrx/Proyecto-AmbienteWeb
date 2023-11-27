@@ -41,7 +41,7 @@ include_once "include/template/header.php";
                 echo "<th><a href='producto-eliminado.php?id={$producto['id']}' class='boton-admin'>Eliminar Producto</a></th>";
                 echo "<form method='post' action='mostrar-producto.php'>";
                 echo "<input type='hidden' name='id' value='{$producto['id']}'>";
-                echo "<input type='submit' name='agregar' value='Añadir al carrito' class='boton-admin'>";
+                echo "<input type='submit' name='agregar' value='Añadir carrito' class='boton-admin'>";
                 echo "</form>";
                 echo "</div>";
             } else {
