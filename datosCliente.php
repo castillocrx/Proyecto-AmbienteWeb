@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="password" name="contrasena" id="contrasena" placeholder="Digite su contraseña">
             </div>
 
-            <input type="submit" class="formulario__submit" value="Procesar información">
+            <input type="submit" class="formulario__submit" style='background-color: #FF4500' value="Procesar información">
         </form>
     </div>
 
