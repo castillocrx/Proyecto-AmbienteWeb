@@ -64,8 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="contrasena">Digite la contraseña:</label>
                 <input type="password" name="contrasena" id="contrasena" placeholder="Digite su contraseña">
             </div>
-            <input type="submit" class="formulario__submit" value="Ingreso"><br>
-            <a href="datosCliente.php"  class="boton-admin" rel="noopener noreferrer">Agregar cuenta</a>
+            <input type="submit" class="formulario__submit" style='background-color: #FF4500' value="Ingreso"><br>
+            <a href="datosCliente.php"  class="boton-admin" style='background-color: #FF4500' rel="noopener noreferrer">Agregar cuenta</a>
         </form>
     </div>
 

@@ -49,12 +49,12 @@ include_once "include/template/header.php";
                 // btn para quitar el producto del carrito
                 echo "<form method='post' action='carrito.php'>";
                 echo "<input type='hidden' name='id' value='$id'>";
-                echo "<input class='boton-admin' type='submit' name='eliminar' value='Eliminar'>";
+                echo "<input class='boton-admin' type='submit' name='eliminar'style='background-color: #FF4500' value='Eliminar'>";
                 echo "</form>";
                 $totalPrecio += $producto['precio'];
                 echo "<form method='post' action='realizar-compra.php'>";
                 echo "<input type='hidden' name='id' value='$id'>";
-                echo "<input class='boton-admin' type='submit' name='comprar' value='Comprar'>";
+                echo "<input class='boton-admin' type='submit' name='comprar' style='background-color: #FF4500' value='Comprar'>";
                 echo "</form>";
 
                 echo "</div>";

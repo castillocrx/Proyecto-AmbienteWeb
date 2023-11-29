@@ -38,10 +38,10 @@ include_once "include/template/header.php";
                 echo "<img src='{$producto['imagen']}' alt='Imagen del producto' height='100'>";
                 echo "<tr><th>Precio</th><td>{$producto['precio']}</td></tr>";
                 echo "</table>";
-                echo "<th><a href='producto-eliminado.php?id={$producto['id']}' class='boton-admin'>Eliminar Producto</a></th>";
+                echo "<th><a href='producto-eliminado.php?id={$producto['id']}' class='boton-admin' style='background-color: #FF4500'>Eliminar Producto</a></th>";
                 echo "<form method='post' action='mostrar-producto.php'>";
                 echo "<input type='hidden' name='id' value='{$producto['id']}'>";
-                echo "<input type='submit' name='agregar' value='Añadir carrito' class='boton-admin'>";
+                echo "<input type='submit' name='agregar' style='background-color: #FF4500' value='Añadir carrito' class='boton-admin'>";
                 echo "</form>";
                 echo "</div>";
             } else {

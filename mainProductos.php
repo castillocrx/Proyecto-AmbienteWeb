@@ -19,7 +19,7 @@ include_once "include/template/header.php";
                 echo "<p>{$value['descripcion']}</p>";
                 echo "<img src='{$value['imagen']}' alt='Imagen del producto' height='100'>";
                 echo "<p>Precio: {$value['precio']}</p>";
-                echo "<a href=mostrar-producto.php?id={$value['id']} class='boton-admin'>Ver Producto</a>";
+                echo "<a href=mostrar-producto.php?id={$value['id']} class='boton-admin' style='background-color: #FF4500'>Ver Producto</a>";
                 echo "</div>";
             }
         } else {
@@ -28,7 +28,7 @@ include_once "include/template/header.php";
         ?>
     </div>
 </main>
-<a href="añadir-producto.php" class="boton-admin">Añadir Productos</a>
+<a href="añadir-producto.php" style='background-color: #FF4500' class="boton-admin">Añadir Productos</a>
 <?php
 require_once "include/template/footer.php";
 ?>

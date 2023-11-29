@@ -2,6 +2,8 @@
 include_once "include/template/header.php";
 ?>
 
+
+
 <div class="bienv-pos">
     <h1 class="bienvenido">Nuestros descuentos.</h1>
 </div>
@@ -20,7 +22,7 @@ include_once "include/template/header.php";
                 echo "<p>{$value['descripcion']}</p>";
                 echo "<img src='{$value['imagen']}' alt='Imagen del producto' height='100'>";
                 echo "<p>Precio: {$value['precio']}</p>";
-                echo "<a href=mostrar-producto.php?id={$value['id']} class='boton-admin'>Ver Producto</a>";
+                echo "<a href=mostrar-producto.php?id={$value['id']} class='boton-admin' style='background-color: #FF4500'>Ver Producto</a>";
                 echo "</div>";
             }
         } else {

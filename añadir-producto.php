@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="precio">Precio Producto:</label>
                 <input type="number" name="precio" id="precio" placeholder="Digite el precio" required>
             </div>
-            <input type="submit" class="formulario__submit" value="Procesar información">
+            <input type="submit" class="formulario__submit" style='background-color: #FF4500' value="Procesar información">
         </form>
     </div>
 </main>
