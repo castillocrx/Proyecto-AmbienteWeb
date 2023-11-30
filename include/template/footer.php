@@ -47,12 +47,12 @@
         </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="Cuenta.html">
+                <a class="menu__link" href="Cuenta.php">
                     Cuenta
         </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="descuentos.html">
+                <a class="menu__link" href="descuentos.php">
                     Descuentos
         </a>
             </li>
@@ -62,7 +62,7 @@
         </a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" href="nosotros.html">
+                <a class="menu__link" href="nosotros.php">
                     Nosotros
         </a>
             </li>
