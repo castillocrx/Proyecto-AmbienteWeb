@@ -69,6 +69,9 @@
                 echo "<p class='text-muted'>Dirección: " . $cliente['direccion'] . "</p>";
                 echo "<p>Teléfono: " . $cliente['telefono'] . "</p>";
                 echo "<button class='btn btn-primary boton-admin' style='background-color: #FF4500' id='cerrarSesionBtn'>Cerrar Sesión</button>";
+                if (isset($_SESSION['correo']) && $_SESSION['correo'] === 'admin@gmail.com') {
+                    echo "<a href='verUsuarios.php' class='boton-admin' style='background-color: #FF4500'>Ver Usuarios</a></th>";
+                } 
                 echo "</div>";
             } else {
                 echo "<p class='text-danger'>Error al obtener la información del cliente</p>";

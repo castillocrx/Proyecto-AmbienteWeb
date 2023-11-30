@@ -102,7 +102,6 @@ function eliminarProducto($idProducto) {
     }
 }
 
-// En producto.php
 function getProductoById($id) {
     try {
         $oConexion = Conecta();

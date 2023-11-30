@@ -1,5 +1,6 @@
 <?php
 include_once "include/template/header.php";
+session_start();
 ?>
 
 <div class="bienv-pos">
@@ -28,7 +29,13 @@ include_once "include/template/header.php";
         ?>
     </div>
 </main>
-<a href="añadir-producto.php" style='background-color: #FF4500' class="boton-admin">Añadir Productos</a>
 <?php
+if (isset($_SESSION['correo']) && $_SESSION['correo'] === 'admin@gmail.com') {
+    echo "<a href='añadir-producto.php' style='background-color: #FF4500' class='boton-admin'>Añadir Productos</a>";
+}
+
+
+
+
 require_once "include/template/footer.php";
 ?>
