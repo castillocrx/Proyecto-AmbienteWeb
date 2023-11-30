@@ -129,3 +129,34 @@ VALUES (
         '4860'
     );
 
+INSERT INTO
+    `productos` (
+        `id`,
+        `nombre`,
+        `descripcion`,
+        `imagen`,
+        `precio`
+    )
+VALUES (
+        NULL,
+        'Promo 2x1 en Hamburguesa Ibérica',
+        'Hamburguesa de Cerdo en pan brioche, con jamón, tomate y lechuga, queso gouda y salsa de queso azul',
+        'https://www.sierradecodex.com/wp-content/uploads/2021/07/rustic-hamburger-.jpg', 
+        '4790'
+    );
+
+    INSERT INTO
+    `productos` (
+        `id`,
+        `nombre`,
+        `descripcion`,
+        `imagen`,
+        `precio`
+    )
+VALUES (
+        NULL,
+        'Promo 35% de descuento en la Tex Mex Burger',
+        'Hamburguesa de ternera en pan rústico, con jalapeños, tomate y aguacate, queso cheddar y salsa Jack Daniels',
+        'https://www.thespruceeats.com/thmb/tdJhJ3axW6-Qhi8SOkDRcNIrSFk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-taco-seasoned-burger-896375500-6a89d71a818f4adcb36fd8a909116780.jpg', 
+        '4560'
+    );
