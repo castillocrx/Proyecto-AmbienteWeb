@@ -26,6 +26,9 @@ function IngresoProducto($pNombre, $pDescripcion, $pImagen, $pPrecio) {
 
     } catch (\Throwable $th) {
         echo $th;
+        error_log("Error inesperado: " . $th->getMessage(), 0);
+
+        echo "Ocurrió un error";
     }finally{
         Desconecta($oConexion);
     }
@@ -51,6 +54,9 @@ function getArray($sql) {
 
     } catch (\Throwable $th) {
         echo $th;
+        error_log("Error inesperado: " . $th->getMessage(), 0);
+
+        echo "Ocurrió un error";
     }finally{
         Desconecta($oConexion);
     }
@@ -75,6 +81,9 @@ function getObject($sql) {
 
     } catch (\Throwable $th) {
         echo $th;
+        error_log("Error inesperado: " . $th->getMessage(), 0);
+
+        echo "Ocurrió un error";
     }finally{
         Desconecta($oConexion);
     }
@@ -96,6 +105,9 @@ function eliminarProducto($idProducto) {
         }
     } catch (\Throwable $th) {
         echo $th; 
+        error_log("Error inesperado: " . $th->getMessage(), 0);
+
+        echo "Ocurrió un error";
         return false;
     } finally {
         Desconecta($oConexion);
@@ -126,6 +138,9 @@ function getProductoById($id) {
         }
     } catch (\Throwable $th) {
         echo $th;
+        error_log("Error inesperado: " . $th->getMessage(), 0);
+
+        echo "Ocurrió un error";
     } finally {
         Desconecta($oConexion);
     }

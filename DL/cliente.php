@@ -31,6 +31,9 @@ function IngresoCliente($pNombre, $pCorreo, $pDireccion, $pTelefono, $pContrasen
 
     } catch (\Throwable $th) {
         echo $th;
+        error_log("Error inesperado: " . $th->getMessage(), 0);
+
+        echo "Ocurrió un error";
     } finally {
         Desconecta($oConexion);
     }
@@ -54,8 +57,10 @@ function getArray2($sql) {
         }
 
     } catch (\Throwable $th) {
-        //Bitacora
         echo $th;
+        error_log("Error inesperado: " . $th->getMessage(), 0);
+
+        echo "Ocurrió un error";
     }finally{
         Desconecta($oConexion);
     }
@@ -70,7 +75,7 @@ function getObject2($sql) {
         //formato datos utf8
         if(mysqli_set_charset($oConexion, "utf8")){
             
-            if(!$result = mysqli_query($oConexion, $sql)) die(); //cancelamos el programa
+            if(!$result = mysqli_query($oConexion, $sql)) die();
 
             $retorno = null;
 
@@ -80,7 +85,9 @@ function getObject2($sql) {
         }
 
     } catch (\Throwable $th) {
-        //Bitacora
+        error_log("Error inesperado: " . $th->getMessage(), 0);
+
+        echo "Ocurrió un error";
         echo $th;
     }finally{
         Desconecta($oConexion);
@@ -118,6 +125,9 @@ function getClienteByCorreo($correo) {
         }
     } catch (\Throwable $th) {
         echo $th;
+        error_log("Error inesperado: " . $th->getMessage(), 0);
+
+        echo "Ocurrió un error";
     } finally {
         Desconecta($oConexion);
     }
